@@ -62,6 +62,6 @@ Para graficar: uso de memoria vs número de elementos, o comparativas de tiempo.
 
 ## Créditos
 
-Desarrollado por *[Autores del Proyecto]*  
-Curso: *Estructuras de Datos Avanzadas*  
-Año: 2023  
+Desarrollado por *David Sánchez, Andrea Duarte, Franco Aguilera, Sara Zambrana, Alicia Estrada *  
+Clase: *Algoritmos y estructuras de datos*  
+Año: 2025  
