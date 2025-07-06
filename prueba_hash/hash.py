@@ -1,19 +1,33 @@
+# hash.py
+"""
+Estructura de datos HashTable con encadenamiento separado.
+Contiene las clases Node (nodo de lista enlazada) y HashTable para inserción, búsqueda y eliminación eficiente.
+"""
+
 class Node:
+    """Nodo simple para lista enlazada, usado en colisiones de la tabla hash."""
     def __init__(self, key, value):
         self.key = key
         self.value = value
         self.next = None
 
 class HashTable:
-    def __init__(self, size=1024):
+    """
+    Tabla hash con encadenamiento separado.
+    - size: número de slots/buckets
+    - table: lista de referencias a la cabeza de cada lista enlazada
+    """
+    def __init__(self, size):
         self.size = size
         self.table = [None] * size
 
-    def _hash(self, key):
+    def hash_function(self, key):
+        """Devuelve el índice hash de la clave."""
         return hash(key) % self.size
 
     def insert(self, key, value):
-        idx = self._hash(key)
+        """Inserta o actualiza un par clave-valor."""
+        idx = self.hash_function(key)
         node = self.table[idx]
         while node:
             if node.key == key:
@@ -25,7 +39,8 @@ class HashTable:
         self.table[idx] = new_node
 
     def search(self, key):
-        idx = self._hash(key)
+        """Devuelve el valor de la clave o None si no existe."""
+        idx = self.hash_function(key)
         node = self.table[idx]
         while node:
             if node.key == key:
@@ -34,7 +49,8 @@ class HashTable:
         return None
 
     def delete(self, key):
-        idx = self._hash(key)
+        """Elimina el nodo con la clave dada; True si lo elimina, False si no existe."""
+        idx = self.hash_function(key)
         node = self.table[idx]
         prev = None
         while node:

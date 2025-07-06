@@ -1,10 +1,22 @@
-from prueba_hash.memoria_prueba import memory_usage
+# memoria.py
+"""
+Funciones para perfilamiento y medición de uso de memoria usando memory_profiler.
+Requiere instalar memory_profiler: pip install memory_profiler
+"""
 
-def memory_test():
-    ht = HashTable(size=1000)
-    keys = [random_key() for _ in range(2000)]
-    def fill_table():
+from memory_profiler import memory_usage
+from hash import HashTable
+import random
+
+def profile_memory_insert(n_elements, table_size):
+    """
+    Mide el consumo de memoria durante la inserción de n_elements en una HashTable.
+    Devuelve el uso máximo en MB.
+    """
+    def run():
+        ht = HashTable(table_size)
+        keys = [random.randint(0, 10 * n_elements) for _ in range(n_elements)]
         for k in keys:
-            ht.insert(k, random.randint(1, 10000))
-    mem_usage = memory_usage(fill_table, interval=0.01)
-    print(f"Uso máximo de memoria: {max(mem_usage) - min(mem_usage):.2f} MB")
+            ht.insert(k, str(k))
+    mem = memory_usage(run, max_iterations=1, interval=0.01)
+    return max(mem) - min(mem)
