@@ -36,7 +36,7 @@ Ejecute:
 python main.py
 ```
 
-### Opciones:
+### Opciones
 
 1. **Prueba personalizada:** Exporta `personalizada_hash.csv`.  
 2. **Perfil de memoria:** Exporta `memoria_hash.csv`.  
@@ -62,6 +62,6 @@ Para graficar: uso de memoria vs número de elementos, o comparativas de tiempo.
 
 ## Créditos
 
-Desarrollado por *David Sánchez, Andrea Duarte, Franco Aguilera, Sara Zambrana, Alicia Estrada *  
+Desarrollado por *David Sánchez, Andrea Duarte, Franco Aguilera, Sara Zambrana, Alicia Estrada*  
 Clase: *Algoritmos y estructuras de datos*  
 Año: 2025  
