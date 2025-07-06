@@ -7,7 +7,7 @@ Proyecto de análisis de rendimiento para la estructura de datos **Tabla Hash co
 ## Clonación del repositorio
 
 ```bash
-git clone <URL-del-repositorio.git>
+git clone <https://github.com/AliciaEA/InvAlgEstDatos_Qck_Hsh.git>
 cd analisis-hash
 ```
 
