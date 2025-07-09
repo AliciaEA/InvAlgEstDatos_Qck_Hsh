@@ -103,5 +103,6 @@ Para graficar: uso de memoria vs número de elementos, o comparativas de tiempo.
 
 Desarrollado por *David Sánchez, Andrea Duarte, Franco Aguilera, Sara Zambrana, Alicia Estrada*  
 Clase: *Algoritmos y estructuras de datos*  
+Mes: Julio
 Año: 2025  
 
