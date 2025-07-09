@@ -42,19 +42,19 @@ def test_hash_table(n_elements, n_search, n_delete, table_size, percent_non_exis
     Realiza inserciones, búsquedas y eliminaciones sobre la tabla hash.
     Devuelve los tiempos de ejecución de cada operación.
     """
-    ht = HashTable(table_size)
+    ht = HashTable(table_size) # Inicializa la tabla hash con el tamaño dado
     # Genera claves aleatorias y claves no existentes
     keys = [random.randint(0, 10 * n_elements) for _ in range(n_elements)]
     non_existing_keys = [max(keys) + 1 + i for i in range(max(n_search, n_delete))]
     # Inserción
-    t0 = time.perf_counter()
-    for k in keys:
+    t0 = time.perf_counter()# Inicia el temporizador para la inserción
+    for k in keys: # Inserción de claves 
         ht.insert(k, str(k))
     t1 = time.perf_counter()
     insert_time = t1 - t0
     # Búsqueda (mitad existentes, mitad no existentes)
-    t0 = time.perf_counter()
-    for i in range(n_search):
+    t0 = time.perf_counter() # Inicia el temporizador para la búsqueda
+    for i in range(n_search): # Busuqueda de claves 
         key = non_existing_keys[i] if i < int(n_search * percent_non_existing) else random.choice(keys)
         ht.search(key)
     t1 = time.perf_counter()

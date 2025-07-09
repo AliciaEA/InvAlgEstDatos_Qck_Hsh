@@ -27,6 +27,10 @@ def main_menu():
             case "2":
                 perfil_memoria_simple_export()
             case "3":
+                #Sizes y tabla_sizes son listas de tamaños para los experimentos
+                #n_search y n_delete son el número de búsquedas y eliminaciones a realizar
+                #repetitions es el número de repeticiones para cada experimento
+                #csv_filename es el nombre del archivo CSV donde se guardarán los resultados
                 run_experiments_export(
                     sizes=[20000,55000, 100000, 200000, 500000, 1000000],
                     table_sizes=[1000, 2000, 5000],

@@ -71,7 +71,7 @@ def run_analysis_for_data_type(data_sizes, num_repetitions, data_generation_func
     return test_results
 if __name__ == "__main__":
         print("¡El script se está ejecutando!")
-        data_sizes = [100, 10000, 100000]
+        data_sizes = [100, 10000, 1000000]
         num_repetitions_per_size = 5
         
         #Ejecutar para el Caso Promedio (Aleatorio)
