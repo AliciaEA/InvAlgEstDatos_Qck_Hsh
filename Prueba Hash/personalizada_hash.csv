@@ -1,2 +1,0 @@
-n_elements,table_size,factor_carga,insert_time,search_time,delete_time,memory_usage,total_exec_time
-300000,2000,150.0,2.28163470900472,0.027381416999560315,0.13804566700127907,50.3125,42.73387029200239
